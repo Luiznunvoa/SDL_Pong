@@ -21,6 +21,11 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
+			"path" : "C:/Users/Administrator/Desktop/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeMinGWFindMake.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
 			"path" : "C:/Users/Administrator/Desktop/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake"
 		},
 		{
@@ -569,6 +574,21 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
+			"path" : "C:/Users/Administrator/Desktop/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeFindCodeBlocks.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Administrator/Desktop/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Users/Administrator/Desktop/bin/cmake/win/x64/share/cmake-3.28/Modules/ProcessorCount.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
 			"path" : "C:/Users/Administrator/Desktop/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake"
 		},
 		{
@@ -850,8 +870,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/Dev/Clion_SDL_Template/cmake-build-debug",
-		"source" : "C:/Dev/Clion_SDL_Template"
+		"build" : "C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug",
+		"source" : "C:/Dev/SDL2_Test01/Clion_SDL_Template"
 	},
 	"version" : 
 	{

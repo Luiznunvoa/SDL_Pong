@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Dev/Clion_SDL_Template/cmake-build-debug",
-		"source" : "C:/Dev/Clion_SDL_Template"
+		"build" : "C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug",
+		"source" : "C:/Dev/SDL2_Test01/Clion_SDL_Template"
 	},
 	"version" : 
 	{

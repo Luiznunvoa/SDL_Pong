@@ -1,4 +1,4 @@
-# Install script for directory: C:/Dev/Clion_SDL_Template
+# Install script for directory: C:/Dev/SDL2_Test01/Clion_SDL_Template
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Dev/Clion_SDL_Template/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

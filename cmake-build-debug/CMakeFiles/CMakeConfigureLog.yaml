@@ -28,7 +28,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
       
       The C compiler identification is GNU, found in:
-        C:/Dev/Clion_SDL_Template/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe
+        C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe
       
   -
     kind: "message-v1"
@@ -50,7 +50,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
       
       The CXX compiler identification is GNU, found in:
-        C:/Dev/Clion_SDL_Template/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/a.exe
+        C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/a.exe
       
   -
     kind: "try_compile-v1"
@@ -61,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Dev/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s579f7"
-      binary: "C:/Dev/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s579f7"
+      source: "C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kcve8u"
+      binary: "C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kcve8u"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -71,10 +71,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Dev/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s579f7'
+        Change Dir: 'C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kcve8u'
         
-        Run Build Command(s): C:/Users/Administrator/Desktop/bin/ninja/win/x64/ninja.exe -v cmTC_5bec4
-        [1/2] C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.obj -c C:/Users/Administrator/Desktop/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): C:/Users/Administrator/Desktop/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 C:/Users/Administrator/Desktop/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_c8705/fast
+        C:/Users/Administrator/Desktop/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_c8705.dir\\build.make CMakeFiles/cmTC_c8705.dir/build
+        mingw32-make[1]: Entering directory 'C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kcve8u'
+        Building C object CMakeFiles/cmTC_c8705.dir/CMakeCCompilerABI.c.obj
+        C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles\\cmTC_c8705.dir\\CMakeCCompilerABI.c.obj -c C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe
         Target: x86_64-w64-mingw32
@@ -82,8 +85,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 13.1.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5bec4.dir/'
-         C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/Administrator/Desktop/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_5bec4.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccTiML5Z.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_c8705.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_c8705.dir\\'
+         C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_c8705.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccPMUVAT.s
         GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0-p4, MPC version 1.3.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -101,13 +104,17 @@ events:
          C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5bec4.dir/'
-         as -v -o CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccTiML5Z.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_c8705.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_c8705.dir\\'
+         as -v -o CMakeFiles\\cmTC_c8705.dir\\CMakeCCompilerABI.c.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccPMUVAT.s
         GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40
         COMPILER_PATH=C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/
-        LIBRARY_PATH=C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../\x0d
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.'\x0d
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe  -v CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.obj -o cmTC_5bec4.exe -Wl,--out-implib,libcmTC_5bec4.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        LIBRARY_PATH=C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_c8705.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_c8705.dir\\CMakeCCompilerABI.c.'
+        Linking C executable cmTC_c8705.exe
+        C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_c8705.dir\\link.txt --verbose=1
+        C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_c8705.dir/objects.a
+        C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\ar.exe qc CMakeFiles\\cmTC_c8705.dir/objects.a @CMakeFiles\\cmTC_c8705.dir\\objects1.rsp
+        C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_c8705.dir/objects.a -Wl,--no-whole-archive -o cmTC_c8705.exe -Wl,--out-implib,libcmTC_c8705.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe
         COLLECT_LTO_WRAPPER=C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
@@ -118,9 +125,10 @@ events:
         gcc version 13.1.0 (GCC) 
         COMPILER_PATH=C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/
         LIBRARY_PATH=C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5bec4.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_5bec4.'
-         C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_5bec4.exe C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_5bec4.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5bec4.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_5bec4.'\x0d
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c8705.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_c8705.'
+         C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_c8705.exe C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. --whole-archive CMakeFiles\\cmTC_c8705.dir/objects.a --no-whole-archive --out-implib libcmTC_c8705.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c8705.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_c8705.'
+        mingw32-make[1]: Leaving directory 'C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kcve8u'
         
       exitCode: 0
   -
@@ -154,10 +162,13 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'C:/Dev/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-s579f7']
+        ignore line: [Change Dir: 'C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kcve8u']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/Administrator/Desktop/bin/ninja/win/x64/ninja.exe -v cmTC_5bec4]
-        ignore line: [[1/2] C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.obj -c C:/Users/Administrator/Desktop/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): C:/Users/Administrator/Desktop/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 C:/Users/Administrator/Desktop/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_c8705/fast]
+        ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_c8705.dir\\build.make CMakeFiles/cmTC_c8705.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-kcve8u']
+        ignore line: [Building C object CMakeFiles/cmTC_c8705.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles\\cmTC_c8705.dir\\CMakeCCompilerABI.c.obj -c C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -165,8 +176,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.1.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5bec4.dir/']
-        ignore line: [ C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/Administrator/Desktop/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_5bec4.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccTiML5Z.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_c8705.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_c8705.dir\\']
+        ignore line: [ C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_c8705.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccPMUVAT.s]
         ignore line: [GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0-p4  MPC version 1.3.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -184,8 +195,8 @@ events:
         ignore line: [ C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5bec4.dir/']
-        ignore line: [ as -v -o CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccTiML5Z.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_c8705.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_c8705.dir\\']
+        ignore line: [ as -v -o CMakeFiles\\cmTC_c8705.dir\\CMakeCCompilerABI.c.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccPMUVAT.s]
         ignore line: [GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40]
         ignore line: [COMPILER_PATH=C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
         ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/]
@@ -194,9 +205,13 @@ events:
         ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
         ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
-        ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../\x0d]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.'\x0d]
-        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe  -v CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.obj -o cmTC_5bec4.exe -Wl --out-implib libcmTC_5bec4.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_c8705.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_c8705.dir\\CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_c8705.exe]
+        ignore line: [C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_c8705.dir\\link.txt --verbose=1]
+        ignore line: [C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_c8705.dir/objects.a]
+        ignore line: [C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\ar.exe qc CMakeFiles\\cmTC_c8705.dir/objects.a @CMakeFiles\\cmTC_c8705.dir\\objects1.rsp]
+        ignore line: [C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_c8705.dir/objects.a -Wl --no-whole-archive -o cmTC_c8705.exe -Wl --out-implib libcmTC_c8705.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
@@ -213,14 +228,14 @@ events:
         ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5bec4.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_5bec4.']
-        link line: [ C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_5bec4.exe C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_5bec4.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_c8705.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_c8705.']
+        link line: [ C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_c8705.exe C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. --whole-archive CMakeFiles\\cmTC_c8705.dir/objects.a --no-whole-archive --out-implib libcmTC_c8705.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
           arg [C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe] ==> ignore
           arg [-m] ==> ignore
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_5bec4.exe] ==> ignore
+          arg [cmTC_c8705.exe] ==> ignore
           arg [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> obj [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
           arg [-LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> dir [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0]
@@ -229,9 +244,11 @@ events:
           arg [-LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> dir [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib]
           arg [-LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib]
           arg [-LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> dir [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..]
-          arg [CMakeFiles/cmTC_5bec4.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [--whole-archive] ==> ignore
+          arg [CMakeFiles\\cmTC_c8705.dir/objects.a] ==> ignore
+          arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_5bec4.dll.a] ==> ignore
+          arg [libcmTC_c8705.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -287,8 +304,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Dev/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1znkkx"
-      binary: "C:/Dev/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1znkkx"
+      source: "C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cd26gx"
+      binary: "C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cd26gx"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -297,10 +314,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Dev/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1znkkx'
+        Change Dir: 'C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cd26gx'
         
-        Run Build Command(s): C:/Users/Administrator/Desktop/bin/ninja/win/x64/ninja.exe -v cmTC_a78e3
-        [1/2] C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/Administrator/Desktop/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): C:/Users/Administrator/Desktop/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 C:/Users/Administrator/Desktop/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_b98ff/fast
+        C:/Users/Administrator/Desktop/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b98ff.dir\\build.make CMakeFiles/cmTC_b98ff.dir/build
+        mingw32-make[1]: Entering directory 'C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cd26gx'
+        Building CXX object CMakeFiles/cmTC_b98ff.dir/CMakeCXXCompilerABI.cpp.obj
+        C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always   -v -o CMakeFiles\\cmTC_b98ff.dir\\CMakeCXXCompilerABI.cpp.obj -c C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\g++.exe
         Target: x86_64-w64-mingw32
@@ -308,8 +328,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 13.1.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a78e3.dir/'
-         C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/Administrator/Desktop/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_a78e3.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccIASQUg.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_b98ff.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_b98ff.dir\\'
+         C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_b98ff.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccKVnFem.s
         GNU C++17 (GCC) version 13.1.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0-p4, MPC version 1.3.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -333,13 +353,17 @@ events:
          C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: e75de627edc3c57e31324b930b15b056
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a78e3.dir/'
-         as -v -o CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccIASQUg.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_b98ff.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_b98ff.dir\\'
+         as -v -o CMakeFiles\\cmTC_b98ff.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccKVnFem.s
         GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40
         COMPILER_PATH=C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/
-        LIBRARY_PATH=C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../\x0d
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.'\x0d
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\g++.exe  -v CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_a78e3.exe -Wl,--out-implib,libcmTC_a78e3.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        LIBRARY_PATH=C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_b98ff.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_b98ff.dir\\CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_b98ff.exe
+        C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_b98ff.dir\\link.txt --verbose=1
+        C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_b98ff.dir/objects.a
+        C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\ar.exe qc CMakeFiles\\cmTC_b98ff.dir/objects.a @CMakeFiles\\cmTC_b98ff.dir\\objects1.rsp
+        C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\g++.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_b98ff.dir/objects.a -Wl,--no-whole-archive -o cmTC_b98ff.exe -Wl,--out-implib,libcmTC_b98ff.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
         Using built-in specs.
         COLLECT_GCC=C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\g++.exe
         COLLECT_LTO_WRAPPER=C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
@@ -350,9 +374,10 @@ events:
         gcc version 13.1.0 (GCC) 
         COMPILER_PATH=C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/
         LIBRARY_PATH=C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a78e3.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_a78e3.'
-         C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_a78e3.exe C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_a78e3.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o\x0d
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a78e3.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_a78e3.'\x0d
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b98ff.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_b98ff.'
+         C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_b98ff.exe C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. --whole-archive CMakeFiles\\cmTC_b98ff.dir/objects.a --no-whole-archive --out-implib libcmTC_b98ff.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b98ff.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_b98ff.'
+        mingw32-make[1]: Leaving directory 'C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cd26gx'
         
       exitCode: 0
   -
@@ -392,10 +417,13 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'C:/Dev/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-1znkkx']
+        ignore line: [Change Dir: 'C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cd26gx']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/Administrator/Desktop/bin/ninja/win/x64/ninja.exe -v cmTC_a78e3]
-        ignore line: [[1/2] C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/Administrator/Desktop/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): C:/Users/Administrator/Desktop/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 C:/Users/Administrator/Desktop/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_b98ff/fast]
+        ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b98ff.dir\\build.make CMakeFiles/cmTC_b98ff.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cd26gx']
+        ignore line: [Building CXX object CMakeFiles/cmTC_b98ff.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always   -v -o CMakeFiles\\cmTC_b98ff.dir\\CMakeCXXCompilerABI.cpp.obj -c C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\g++.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -403,8 +431,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.1.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a78e3.dir/']
-        ignore line: [ C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/Administrator/Desktop/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_a78e3.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccIASQUg.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_b98ff.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_b98ff.dir\\']
+        ignore line: [ C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_b98ff.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccKVnFem.s]
         ignore line: [GNU C++17 (GCC) version 13.1.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0-p4  MPC version 1.3.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -428,8 +456,8 @@ events:
         ignore line: [ C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: e75de627edc3c57e31324b930b15b056]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a78e3.dir/']
-        ignore line: [ as -v -o CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccIASQUg.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_b98ff.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_b98ff.dir\\']
+        ignore line: [ as -v -o CMakeFiles\\cmTC_b98ff.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\ccKVnFem.s]
         ignore line: [GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40]
         ignore line: [COMPILER_PATH=C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
         ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/]
@@ -438,9 +466,13 @@ events:
         ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
         ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
-        ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../\x0d]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.'\x0d]
-        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\g++.exe  -v CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_a78e3.exe -Wl --out-implib libcmTC_a78e3.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_b98ff.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_b98ff.dir\\CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_b98ff.exe]
+        ignore line: [C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_b98ff.dir\\link.txt --verbose=1]
+        ignore line: [C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_b98ff.dir/objects.a]
+        ignore line: [C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\ar.exe qc CMakeFiles\\cmTC_b98ff.dir/objects.a @CMakeFiles\\cmTC_b98ff.dir\\objects1.rsp]
+        ignore line: [C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\g++.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_b98ff.dir/objects.a -Wl --no-whole-archive -o cmTC_b98ff.exe -Wl --out-implib libcmTC_b98ff.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\g++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
@@ -457,14 +489,14 @@ events:
         ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a78e3.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_a78e3.']
-        link line: [ C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_a78e3.exe C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_a78e3.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o\x0d]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b98ff.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_b98ff.']
+        link line: [ C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_b98ff.exe C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. --whole-archive CMakeFiles\\cmTC_b98ff.dir/objects.a --no-whole-archive --out-implib libcmTC_b98ff.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
           arg [C:/Users/Administrator/Desktop/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe] ==> ignore
           arg [-m] ==> ignore
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_a78e3.exe] ==> ignore
+          arg [cmTC_b98ff.exe] ==> ignore
           arg [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> obj [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
           arg [-LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> dir [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0]
@@ -473,9 +505,11 @@ events:
           arg [-LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> dir [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib]
           arg [-LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib]
           arg [-LC:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> dir [C:/Users/Administrator/Desktop/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..]
-          arg [CMakeFiles/cmTC_a78e3.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [--whole-archive] ==> ignore
+          arg [CMakeFiles\\cmTC_b98ff.dir/objects.a] ==> ignore
+          arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_a78e3.dll.a] ==> ignore
+          arg [libcmTC_b98ff.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -533,22 +567,30 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Dev/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-v5aujf"
-      binary: "C:/Dev/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-v5aujf"
+      source: "C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-djkhzl"
+      binary: "C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-djkhzl"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Dev/Clion_SDL_Template/cmake_modules"
+      CMAKE_MODULE_PATH: "C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake_modules"
     buildResult:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Dev/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-v5aujf'
+        Change Dir: 'C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-djkhzl'
         
-        Run Build Command(s): C:/Users/Administrator/Desktop/bin/ninja/win/x64/ninja.exe -v cmTC_15191
-        [1/2] C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD  -fdiagnostics-color=always -o CMakeFiles/cmTC_15191.dir/src.c.obj -c C:/Dev/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-v5aujf/src.c
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_15191.dir/src.c.obj -o cmTC_15191.exe -Wl,--out-implib,libcmTC_15191.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/Administrator/Desktop/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 C:/Users/Administrator/Desktop/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_2ffa3/fast
+        C:/Users/Administrator/Desktop/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_2ffa3.dir\\build.make CMakeFiles/cmTC_2ffa3.dir/build
+        mingw32-make[1]: Entering directory 'C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-djkhzl'
+        Building C object CMakeFiles/cmTC_2ffa3.dir/src.c.obj
+        C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD  -fdiagnostics-color=always -o CMakeFiles\\cmTC_2ffa3.dir\\src.c.obj -c C:\\Dev\\SDL2_Test01\\Clion_SDL_Template\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-djkhzl\\src.c
+        Linking C executable cmTC_2ffa3.exe
+        C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_2ffa3.dir\\link.txt --verbose=1
+        C:\\Users\\Administrator\\Desktop\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_2ffa3.dir/objects.a
+        C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\ar.exe qc CMakeFiles\\cmTC_2ffa3.dir/objects.a @CMakeFiles\\cmTC_2ffa3.dir\\objects1.rsp
+        C:\\Users\\Administrator\\Desktop\\bin\\mingw\\bin\\gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_2ffa3.dir/objects.a -Wl,--no-whole-archive -o cmTC_2ffa3.exe -Wl,--out-implib,libcmTC_2ffa3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_2ffa3.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Dev/SDL2_Test01/Clion_SDL_Template/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-djkhzl'
         
       exitCode: 0
 ...
