@@ -303,7 +303,8 @@ CMakeFiles/SDL_test.dir/main.cpp.obj: C:/Dev/SDL2_Test01/Clion_SDL_Template/main
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/winapifamily.h \
-  C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/winsdkver.h
+  C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/winsdkver.h \
+  C:/Dev/SDL2_Test01/Clion_SDL_Template/headers/Game.h
 
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/assertions.h:
@@ -911,3 +912,5 @@ C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/vadefs.h:
 C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/wctype.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/winapifamily.h:
+
+C:/Dev/SDL2_Test01/Clion_SDL_Template/headers/Game.h:
