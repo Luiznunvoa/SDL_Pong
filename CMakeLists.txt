@@ -9,6 +9,7 @@ set(SDL2_PATH "C:/SDL2-2.30.7/x86_64-w64-mingw32")
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR})
 
-add_executable(SDL_test main.cpp)
+add_executable(SDL_test main.cpp
+        headers/Game.h)
 
 target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARY})
