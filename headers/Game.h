@@ -3,13 +3,21 @@
 
 #include <SDL.h>
 #include "Ball.h"
+#include "Player.h"
 #include <iostream>
 
 class Game
 {
 public:
     // Construtor
-    Game() : window(nullptr), renderer(nullptr), m_Running(false), ball(new Ball()) {}
+    Game() : window(nullptr),
+    renderer(nullptr),
+    m_Running(false),
+    ball(new Ball()),
+    player1(new Player()),
+    player2(new Player()) {
+        std::fill(std::begin(KEYS), std::end(KEYS), false);
+    }
 
     // Destrutor
     ~Game()
@@ -18,11 +26,23 @@ public:
         {
             ball = nullptr;
             delete ball;
-            std::cout << "Assets Unloaded" << std::endl;
+            std::cout << "Ball Unloaded" << std::endl;
+        }
+        if (player1)
+        {
+            player1 = nullptr;
+            delete player1;
+        }
+        if (player2)
+        {
+            player2 = nullptr;
+            delete player2;
+            std::cout << "Players unloaded" << std::endl;
         }
         if (renderer)
         {
             SDL_DestroyRenderer(renderer);
+            renderer = nullptr;
             std::cout << "Renderer Unallocated" << std::endl;
         }
         if (window)
@@ -30,8 +50,7 @@ public:
             SDL_DestroyWindow(window);
             window = nullptr;
             std::cout << "Window Unallocated" << std::endl;
-        }
-        SDL_Quit(); // Encerra a SDL corretamente
+        }// Encerra a SDL corretamente
     }
 
     // Inicializa a SDL e configura a janela e o renderizador
@@ -77,6 +96,24 @@ public:
         }
         std::cout << "Ball loaded" << std::endl;
 
+        if (!player1->LoadPlayer(window, renderer, true))
+        {
+            std::cout << "Failed to load player asset: " << SDL_GetError() << std::endl;
+            SDL_DestroyRenderer(renderer);
+            SDL_DestroyWindow(window);
+            SDL_Quit();
+            return false;
+        }
+        if (!player2->LoadPlayer(window, renderer, false))
+        {
+            std::cout << "Failed to load player asset: " << SDL_GetError() << std::endl;
+            SDL_DestroyRenderer(renderer);
+            SDL_DestroyWindow(window);
+            SDL_Quit();
+            return false;
+        }
+        std::cout << "Players loaded" << std::endl;
+
         std::cout << "Initialization Complete" << std::endl;
         return true;
     }
@@ -105,13 +142,24 @@ public:
                 {
                     std::cout << "Message received: SDL_QUIT" << std::endl;
                     m_Running = false;
-                    break;
-                }
+                } break;
+
+                case SDL_KEYDOWN:
+                {
+                    KEYS[event.key.keysym.sym] = true;
+                    std::cout << "Key pressed: " << SDL_GetKeyName(event.key.keysym.sym) << std::endl;
+                } break;
+
+                case SDL_KEYUP:
+                {
+                    KEYS[event.key.keysym.sym] = false;
+                    std::cout << "Key released: " << SDL_GetKeyName(event.key.keysym.sym) << std::endl;
+                } break;
+
                 default:
                 {
-                    std::cout << "Message not processed" << std::endl;
-                }
-                // Outros eventos como teclas pressionadas podem ser adicionados aqui
+                    //TODO PROCESS UNUSED MESSAGES
+                } break;
             }
         }
     }
@@ -137,6 +185,16 @@ public:
             std::cout << "Faild to render ball" << std::endl;
             m_Running = false;
         };
+        if(!player1->Renderplayer(renderer))
+        {
+            std::cout << "Faild to render player" << std::endl;
+            m_Running = false;
+        };
+        if(!player2->Renderplayer(renderer))
+        {
+            std::cout << "Faild to render player" << std::endl;
+            m_Running = false;
+        };
 
         // Exibe o que foi renderizado
         SDL_RenderPresent(renderer);
@@ -145,7 +203,10 @@ public:
 private:
     SDL_Window* window;
     SDL_Renderer* renderer;
+    bool KEYS[322];
     bool m_Running;  // variável de controle de execução
+    Player* player1;
+    Player* player2;
     Ball* ball;
 };
 

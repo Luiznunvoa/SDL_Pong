@@ -11,6 +11,7 @@ include_directories(${SDL2_INCLUDE_DIR})
 
 add_executable(SDL_test main.cpp
         headers/Game.h
-        headers/Ball.h)
+        headers/Ball.h
+        headers/Player.h)
 
 target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARY})

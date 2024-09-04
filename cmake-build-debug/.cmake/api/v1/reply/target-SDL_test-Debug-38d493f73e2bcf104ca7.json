@@ -35,7 +35,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 16,
+				"line" : 17,
 				"parent" : 0
 			},
 			{
@@ -138,7 +138,8 @@
 			"sourceIndexes" : 
 			[
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -158,6 +159,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "headers/Ball.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "headers/Player.h",
 			"sourceGroupIndex" : 1
 		}
 	],
