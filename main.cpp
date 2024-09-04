@@ -40,6 +40,7 @@ int main(int argc, char* argv[])
     }
 
     // Libera a memória alocada para o jogo
+    gameManager = nullptr;
     delete gameManager;
 
     std::cout << "Game Finalized" << std::endl;

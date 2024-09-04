@@ -3,6 +3,7 @@
 
 #include <SDL.h>
 
+// Classe do retangulo
 class Crate
 {
 public:
@@ -19,11 +20,6 @@ public:
         {
             SDL_FreeSurface(pTempSurface);
             pTempSurface = nullptr;
-        }
-        if((incrementx + incrementy) != 0)
-        {
-            incrementx = NULL;
-            incrementy = NULL;
         }
     }
 
@@ -43,11 +39,12 @@ public:
 
         // Defina o tamanho do sourceRectangle após carregar a textura
         SDL_QueryTexture(m_pTexture, nullptr, nullptr, &sourceRectangle.w, &sourceRectangle.h);
-        destinationRectangle.x = 0;
-        destinationRectangle.y = 0;
+        destinationRectangle.x = 320;
+        destinationRectangle.y = 240;
         return true;
     }
 
+    //Altera a posição do retangulo
     void UpdateRectanglePosition(SDL_Window* window)
     {
         int width, height;
@@ -61,6 +58,9 @@ public:
         {
             // Reverter a direção no eixo X
             incrementx = -incrementx;
+
+            destinationRectangle.x = 320;
+            destinationRectangle.y = 240;
         }
 
         // Verificar colisão com as bordas verticais
@@ -87,6 +87,7 @@ public:
             destinationRectangle.y = height - destinationRectangle.h;
     }
 
+    //Renderiza o retangulo
     bool RenderCrate(SDL_Renderer* renderer)
     {
         if (m_pTexture == nullptr)

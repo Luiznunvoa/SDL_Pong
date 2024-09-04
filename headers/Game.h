@@ -16,15 +16,13 @@ public:
     {
         if (crate)
         {
-
-            delete crate;
             crate = nullptr;
+            delete crate;
             std::cout << "Assets Unloaded" << std::endl;
         }
         if (renderer)
         {
             SDL_DestroyRenderer(renderer);
-            renderer = nullptr;
             std::cout << "Renderer Unallocated" << std::endl;
         }
         if (window)
