@@ -21,7 +21,7 @@ int main(int argc, char* argv[])
     Game* gameManager = new Game();
 
     // Inicializa SDL, janela e renderizador e verifica a inicialização
-    if (!gameManager->init(SDL_INIT_VIDEO, "MyWindow", 100, 100, 640, 480, SDL_WINDOW_SHOWN))
+    if (!gameManager->init(SDL_INIT_VIDEO, "MyWindow", 100, 50, 1280, 960, SDL_WINDOW_SHOWN))
     {
         return -1;
     }

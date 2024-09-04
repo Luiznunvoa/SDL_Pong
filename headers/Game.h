@@ -2,22 +2,22 @@
 #define GAME_H
 
 #include <SDL.h>
-#include "Crate.h"
+#include "Ball.h"
 #include <iostream>
 
 class Game
 {
 public:
     // Construtor
-    Game() : window(nullptr), renderer(nullptr), m_Running(false), crate(new Crate()) {}
+    Game() : window(nullptr), renderer(nullptr), m_Running(false), ball(new Ball()) {}
 
     // Destrutor
     ~Game()
     {
-        if (crate)
+        if (ball)
         {
-            crate = nullptr;
-            delete crate;
+            ball = nullptr;
+            delete ball;
             std::cout << "Assets Unloaded" << std::endl;
         }
         if (renderer)
@@ -67,16 +67,16 @@ public:
         std::cout << "Renderer Created" << std::endl;
 
         // Carrega os assets
-        if (!crate->LoadCrate(renderer))
+        if (!ball->LoadBall(window, renderer))
         {
-            std::cout << "Failed to load crate asset: " << SDL_GetError() << std::endl;
+            std::cout << "Failed to load ball asset: " << SDL_GetError() << std::endl;
             SDL_DestroyRenderer(renderer);
             SDL_DestroyWindow(window);
             SDL_Quit();
             return false;
         }
+        std::cout << "Ball loaded" << std::endl;
 
-        std::cout << "Assets Loaded" << std::endl;
         std::cout << "Initialization Complete" << std::endl;
         return true;
     }
@@ -119,7 +119,7 @@ public:
     // Atualiza o estado do jogo (lógica, física, etc.)
     void update()
     {
-        crate->UpdateRectanglePosition(window);
+        ball->UpdateballPosition(window);
     }
 
     // Renderiza na janela
@@ -131,10 +131,10 @@ public:
         // Limpa a tela
         SDL_RenderClear(renderer);
 
-        // Renderiza a crate
-        if(!crate->RenderCrate(renderer))
+        // Renderiza a ball
+        if(!ball->RenderBall(renderer))
         {
-            std::cout << "Faild to render Crate" << std::endl;
+            std::cout << "Faild to render ball" << std::endl;
             m_Running = false;
         };
 
@@ -146,7 +146,7 @@ private:
     SDL_Window* window;
     SDL_Renderer* renderer;
     bool m_Running;  // variável de controle de execução
-    Crate* crate;
+    Ball* ball;
 };
 
 #endif // GAME_H

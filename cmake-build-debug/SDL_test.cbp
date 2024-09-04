@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Dev/SDL2_Test01/Clion_SDL_Template/headers/Crate.h">
+		<Unit filename="C:/Dev/SDL2_Test01/Clion_SDL_Template/headers/Ball.h">
 			<Option target="SDL_test"/>
 		</Unit>
 		<Unit filename="C:/Dev/SDL2_Test01/Clion_SDL_Template/headers/Game.h">
