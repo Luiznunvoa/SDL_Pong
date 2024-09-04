@@ -3,20 +3,16 @@
 
 #define TICK_INTERVAL    30
 
-static Uint32 next_time;
+static Uint32 next_time = SDL_GetTicks() + TICK_INTERVAL;;
 
 static Uint32 time_left()
 {
-
     Uint32 now = SDL_GetTicks();
     if(next_time <= now)
     {
         return 0;
     }
-    else
-    {
-        return next_time - now;
-    }
+    return next_time - now;
 }
 
 int main(int argc, char* argv[])
@@ -24,16 +20,16 @@ int main(int argc, char* argv[])
     // Inicializa a classe Game
     Game* gameManager = new Game();
 
-    // Inicializa SDL, janela e renderizador
+    // Inicializa SDL, janela e renderizador e verifica a inicialização
     if (!gameManager->init(SDL_INIT_VIDEO, "MyWindow", 100, 100, 640, 480, SDL_WINDOW_SHOWN))
     {
         return -1;
     }
 
-    next_time = SDL_GetTicks() + TICK_INTERVAL;
+    gameManager->setRunning(true);
 
     // Loop principal do jogo
-    while (gameManager->G_Running)
+    while (gameManager->isRunning())
     {
         gameManager->handleEvents();  // Recebe inputs
         gameManager->update();        // Calcula(física, lógica etc)
