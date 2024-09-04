@@ -90,7 +90,7 @@ public:
     }
 
     // Verifica o estado de execução
-    bool isRunning() const
+    [[nodiscard]] bool isRunning() const
     {
         return m_Running;
     }
@@ -109,10 +109,9 @@ public:
                     m_Running = false;
                     break;
                 }
-                case SDL_DISPLAYEVENT:
+                default:
                 {
-                    std::cout << "SDL_DISPLAYEVENT" << std::endl;
-                    break;
+                    std::cout << "Message not processed" << std::endl;
                 }
                 // Outros eventos como teclas pressionadas podem ser adicionados aqui
             }
@@ -122,7 +121,7 @@ public:
     // Atualiza o estado do jogo (lógica, física, etc.)
     void update()
     {
-        // TODO: Lógica do Jogo
+        crate->UpdateRectanglePosition(window);
     }
 
     // Renderiza na janela
@@ -146,10 +145,10 @@ public:
     }
 
 private:
-    Crate* crate;
     SDL_Window* window;
     SDL_Renderer* renderer;
     bool m_Running;  // variável de controle de execução
+    Crate* crate;
 };
 
 #endif // GAME_H

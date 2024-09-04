@@ -190,6 +190,7 @@ CMakeFiles/SDL_test.dir/main.cpp.obj: \
  C:/SDL2-2.30.7/x86_64-w64-mingw32/include/SDL2/SDL_locale.h \
  C:/SDL2-2.30.7/x86_64-w64-mingw32/include/SDL2/SDL_misc.h \
  C:\Dev\SDL2_Test01\Clion_SDL_Template\headers/Game.h \
+ C:\Dev\SDL2_Test01\Clion_SDL_Template\headers/Crate.h \
  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \

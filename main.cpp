@@ -41,7 +41,6 @@ int main(int argc, char* argv[])
 
     // Libera a memória alocada para o jogo
     delete gameManager;
-    gameManager = nullptr;
 
     std::cout << "Game Finalized" << std::endl;
     // Finaliza o SDL
