@@ -192,6 +192,7 @@ CMakeFiles/SDL_test.dir/main.cpp.obj: \
  C:\Dev\SDL2_Test01\Clion_SDL_Template\headers/Game.h \
  C:\Dev\SDL2_Test01\Clion_SDL_Template\headers/Ball.h \
  C:\Dev\SDL2_Test01\Clion_SDL_Template\headers/Player.h \
+ C:\Dev\SDL2_Test01\Clion_SDL_Template\headers/Score.h \
  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \

@@ -306,7 +306,8 @@ CMakeFiles/SDL_test.dir/main.cpp.obj: C:/Dev/SDL2_Test01/Clion_SDL_Template/main
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/winsdkver.h \
   C:/Dev/SDL2_Test01/Clion_SDL_Template/headers/Ball.h \
   C:/Dev/SDL2_Test01/Clion_SDL_Template/headers/Game.h \
-  C:/Dev/SDL2_Test01/Clion_SDL_Template/headers/Player.h
+  C:/Dev/SDL2_Test01/Clion_SDL_Template/headers/Player.h \
+  C:/Dev/SDL2_Test01/Clion_SDL_Template/headers/Score.h
 
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/assertions.h:
@@ -496,6 +497,8 @@ C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/inclu
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512bitalgintrin.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512bwintrin.h:
+
+C:/Dev/SDL2_Test01/Clion_SDL_Template/headers/Score.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512dqintrin.h:
 

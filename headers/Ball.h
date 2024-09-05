@@ -65,7 +65,7 @@ public:
     }
 
     //Altera a posição do retangulo
-    void UpdateballPosition(SDL_Window* window, SDL_Rect player1Rect, SDL_Rect player2Rect)
+    int  UpdateballPosition(SDL_Window* window, SDL_Rect player1Rect, SDL_Rect player2Rect)
     {
         int width, height;
         SDL_GetWindowSize(window, &width, &height);
@@ -77,6 +77,7 @@ public:
             incrementx = -incrementx;  // Reverter a direção no eixo X
             destinationball.x = (width / 2);
             destinationball.y = (height / 2);
+            return 1;
         }
 
         if ((destinationball.y + destinationball.h == height && incrementy > 0) ||
@@ -94,6 +95,7 @@ public:
         // Atualizar a posição da bola
         destinationball.x += incrementx;
         destinationball.y += incrementy;
+        return 0;
     }
 
     //Renderiza o retangulo

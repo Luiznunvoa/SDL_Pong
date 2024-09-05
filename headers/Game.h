@@ -4,6 +4,7 @@
 #include <SDL.h>
 #include "Ball.h"
 #include "Player.h"
+#include "Score.h"
 #include <iostream>
 
 class Game
@@ -16,10 +17,12 @@ public:
     ball(new Ball()),
     player1(new Player()),
     player2(new Player()),
+    score(new Score()),
     player1UpPressed(false),
     player1DownPressed(false),
     player2UpPressed(false),
-    player2DownPressed(false) {}
+    player2DownPressed(false),
+    actualscore(0){}
 
     // Destrutor
     ~Game()
@@ -35,11 +38,18 @@ public:
             delete player1;
             player1 = nullptr;
         }
+
         if (player2)
         {
             delete player2;
             player2 = nullptr;
             std::cout << "Players unloaded" << std::endl;
+        }
+        if (score)
+        {
+            delete score;
+            score = nullptr;
+            std::cout << "Score unloaded" << std::endl;
         }
         if (renderer)
         {
@@ -128,6 +138,16 @@ public:
         }
         std::cout << "Players loaded" << std::endl;
 
+        if(!score->LoadScore(window, renderer))
+        {
+            std::cout << "Failed to load score" << SDL_GetError() << std::endl;
+            SDL_DestroyRenderer(renderer);
+            SDL_DestroyWindow(window);
+            SDL_Quit();
+            return false;
+        }
+        std::cout << "Score Loaded" << std::endl;
+
         std::cout << "Initialization Complete" << std::endl;
         return true;
     }
@@ -195,7 +215,7 @@ public:
     {
         SDL_Rect rect1 = player1->UpdatePlayerPosition(window, player1UpPressed, player1DownPressed);
         SDL_Rect rect2 = player2->UpdatePlayerPosition(window, player2UpPressed, player2DownPressed);
-        ball->UpdateballPosition(window, rect1, rect2);
+        actualscore += ball->UpdateballPosition(window, rect1, rect2);
         // Aqui você pode usar as variáveis player1UpPressed, player1DownPressed, player2UpPressed, player2DownPressed
         // para movimentar os jogadores
     }
@@ -208,6 +228,12 @@ public:
 
         // Limpa a tela
         SDL_RenderClear(renderer);
+
+        if (!score->RenderScore(renderer, actualscore))
+        {
+            std::cout << "Failed to render score" << std::endl;
+            m_Running = false;
+        }
 
         // Renderiza a bola e os jogadores
         if (!ball->RenderBall(renderer))
@@ -237,6 +263,8 @@ private:
     Player* player1;
     Player* player2;
     Ball* ball;
+    Score* score;
+    int actualscore;
 
     // Variáveis para armazenar o estado das teclas
     bool player1UpPressed;
