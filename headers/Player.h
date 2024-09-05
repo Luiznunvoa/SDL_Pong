@@ -11,7 +11,11 @@
 class Player
 {
 public:
-    Player() : Surface(nullptr), Texture(nullptr), sourceplayer{0, 0, 0, 0}, destinationplayer{0, 0, 0, 0}{}
+    Player() : Surface(nullptr),
+    Texture(nullptr),
+    sourceplayer{0, 0, 0, 0},
+    destinationplayer{0, 0, 0, 0},
+    currentdirection(0){}
 
     ~Player()
     {
@@ -58,6 +62,36 @@ public:
         return true;
     }
 
+    void UpdatePlayerPosition(SDL_Window* window, bool Up, bool Down)
+    {
+        // Definir a direção atual com base nas teclas pressionadas
+        if (Up)
+        {
+            currentdirection = -5; // Mover para cima
+        }
+        else if (Down)
+        {
+            currentdirection = 5;  // Mover para baixo
+        }
+        else
+        {
+            currentdirection = 0;  // Parado se nenhuma tecla pressionada
+        }
+
+        int windowWidth, windowHeight;
+
+        // Obter o tamanho da janela
+        SDL_GetWindowSize(window, &windowWidth, &windowHeight);
+
+        // Verifica se o jogador não vai ultrapassar as bordas da janela
+        if ((currentdirection < 0 && destinationplayer.y > 0) ||  // Movendo para cima, mas não ultrapassa o topo
+            (currentdirection > 0 && (destinationplayer.y + destinationplayer.h) < windowHeight))  // Movendo para baixo, mas não ultrapassa a base
+        {
+            destinationplayer.y += currentdirection;
+        }
+    }
+
+
     bool Renderplayer(SDL_Renderer* renderer)
     {
         if (Texture == nullptr)
@@ -82,6 +116,7 @@ private:
     SDL_Texture* Texture;
     SDL_Rect sourceplayer;
     SDL_Rect destinationplayer;
+    int currentdirection;
 };
 
 #endif //PLAYER_H

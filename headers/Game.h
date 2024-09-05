@@ -15,28 +15,30 @@ public:
     m_Running(false),
     ball(new Ball()),
     player1(new Player()),
-    player2(new Player()) {
-        std::fill(std::begin(KEYS), std::end(KEYS), false);
-    }
+    player2(new Player()),
+    player1UpPressed(false),
+    player1DownPressed(false),
+    player2UpPressed(false),
+    player2DownPressed(false) {}
 
     // Destrutor
     ~Game()
     {
         if (ball)
         {
-            ball = nullptr;
             delete ball;
+            ball = nullptr;
             std::cout << "Ball Unloaded" << std::endl;
         }
         if (player1)
         {
-            player1 = nullptr;
             delete player1;
+            player1 = nullptr;
         }
         if (player2)
         {
-            player2 = nullptr;
             delete player2;
+            player2 = nullptr;
             std::cout << "Players unloaded" << std::endl;
         }
         if (renderer)
@@ -50,7 +52,19 @@ public:
             SDL_DestroyWindow(window);
             window = nullptr;
             std::cout << "Window Unallocated" << std::endl;
-        }// Encerra a SDL corretamente
+        }
+    }
+
+    // Define o estado de execução
+    void setRunning(bool running)
+    {
+        m_Running = running;
+    }
+
+    // Verifica o estado de execução
+    [[nodiscard]] bool isRunning() const
+    {
+        return m_Running;
     }
 
     // Inicializa a SDL e configura a janela e o renderizador
@@ -118,19 +132,38 @@ public:
         return true;
     }
 
-    // Define o estado de execução
-    void setRunning(bool running)
-    {
-        m_Running = running;
-    }
-
-    // Verifica o estado de execução
-    [[nodiscard]] bool isRunning() const
-    {
-        return m_Running;
-    }
-
     // Lida com eventos de entrada
+    void handleKeyInput(SDL_Event event, int condition)
+    {
+        const char* array[] = {"PRESSED", "RELEASED"};
+
+        switch (event.key.keysym.sym)
+        {
+            // Player 1 (W e S)
+            case SDLK_w:
+                player1UpPressed = (condition == 0); // Pressionado ou solto
+                std::cout << "Player 1 UP " << array[condition] << std::endl;
+                break;
+            case SDLK_s:
+                player1DownPressed = (condition == 0);
+                std::cout << "Player 1 DOWN " << array[condition] << std::endl;
+                break;
+
+            // Player 2 (UP e DOWN)
+            case SDLK_UP:
+                player2UpPressed = (condition == 0);
+                std::cout << "Player 2 UP " << array[condition] << std::endl;
+                break;
+            case SDLK_DOWN:
+                player2DownPressed = (condition == 0);
+                std::cout << "Player 2 DOWN " << array[condition] << std::endl;
+                break;
+
+            default:
+                std::cout << "Unknown key " << array[condition] << std::endl;
+        }
+    }
+
     void handleEvents()
     {
         SDL_Event event;
@@ -139,27 +172,20 @@ public:
             switch (event.type)
             {
                 case SDL_QUIT:
-                {
                     std::cout << "Message received: SDL_QUIT" << std::endl;
                     m_Running = false;
-                } break;
+                    break;
 
                 case SDL_KEYDOWN:
-                {
-                    KEYS[event.key.keysym.sym] = true;
-                    std::cout << "Key pressed: " << SDL_GetKeyName(event.key.keysym.sym) << std::endl;
-                } break;
+                    handleKeyInput(event, 0);
+                    break;
 
                 case SDL_KEYUP:
-                {
-                    KEYS[event.key.keysym.sym] = false;
-                    std::cout << "Key released: " << SDL_GetKeyName(event.key.keysym.sym) << std::endl;
-                } break;
+                    handleKeyInput(event, 1);
+                    break;
 
                 default:
-                {
-                    //TODO PROCESS UNUSED MESSAGES
-                } break;
+                    break;
             }
         }
     }
@@ -167,7 +193,11 @@ public:
     // Atualiza o estado do jogo (lógica, física, etc.)
     void update()
     {
+        player1->UpdatePlayerPosition(window, player1UpPressed, player1DownPressed);
+        player2->UpdatePlayerPosition(window, player2UpPressed, player2DownPressed);
         ball->UpdateballPosition(window);
+        // Aqui você pode usar as variáveis player1UpPressed, player1DownPressed, player2UpPressed, player2DownPressed
+        // para movimentar os jogadores
     }
 
     // Renderiza na janela
@@ -179,22 +209,22 @@ public:
         // Limpa a tela
         SDL_RenderClear(renderer);
 
-        // Renderiza a ball
-        if(!ball->RenderBall(renderer))
+        // Renderiza a bola e os jogadores
+        if (!ball->RenderBall(renderer))
         {
-            std::cout << "Faild to render ball" << std::endl;
+            std::cout << "Failed to render ball" << std::endl;
             m_Running = false;
-        };
-        if(!player1->Renderplayer(renderer))
+        }
+        if (!player1->Renderplayer(renderer))
         {
-            std::cout << "Faild to render player" << std::endl;
+            std::cout << "Failed to render player 1" << std::endl;
             m_Running = false;
-        };
-        if(!player2->Renderplayer(renderer))
+        }
+        if (!player2->Renderplayer(renderer))
         {
-            std::cout << "Faild to render player" << std::endl;
+            std::cout << "Failed to render player 2" << std::endl;
             m_Running = false;
-        };
+        }
 
         // Exibe o que foi renderizado
         SDL_RenderPresent(renderer);
@@ -203,11 +233,16 @@ public:
 private:
     SDL_Window* window;
     SDL_Renderer* renderer;
-    bool KEYS[322];
     bool m_Running;  // variável de controle de execução
     Player* player1;
     Player* player2;
     Ball* ball;
+
+    // Variáveis para armazenar o estado das teclas
+    bool player1UpPressed;
+    bool player1DownPressed;
+    bool player2UpPressed;
+    bool player2DownPressed;
 };
 
 #endif // GAME_H
