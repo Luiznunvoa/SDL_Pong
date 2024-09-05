@@ -11,177 +11,44 @@ class Game
 {
 public:
     // Construtor
-    Game() : window(nullptr),
-    renderer(nullptr),
-    m_Running(false),
-    ball(new Ball()),
-    player1(new Player()),
-    player2(new Player()),
-    score(new Score()),
-    player1UpPressed(false),
-    player1DownPressed(false),
-    player2UpPressed(false),
-    player2DownPressed(false),
-    actualscore(0){}
+    Game():
+            windowState{nullptr, nullptr},
+            gamestate{false, 0},
+            props{new Ball(), new Score()},
+            inputState{false, false,
+                false, false},
+            players{new Player(), new Player()}
+    {}
 
     // Destrutor
     ~Game()
     {
-        if (ball)
-        {
-            delete ball;
-            ball = nullptr;
-            std::cout << "Ball Unloaded" << std::endl;
-        }
-        if (player1)
-        {
-            delete player1;
-            player1 = nullptr;
-        }
-
-        if (player2)
-        {
-            delete player2;
-            player2 = nullptr;
-            std::cout << "Players unloaded" << std::endl;
-        }
-        if (score)
-        {
-            delete score;
-            score = nullptr;
-            std::cout << "Score unloaded" << std::endl;
-        }
-        if (renderer)
-        {
-            SDL_DestroyRenderer(renderer);
-            renderer = nullptr;
-            std::cout << "Renderer Unallocated" << std::endl;
-        }
-        if (window)
-        {
-            SDL_DestroyWindow(window);
-            window = nullptr;
-            std::cout << "Window Unallocated" << std::endl;
-        }
+        cleanUp();
     }
 
     // Define o estado de execução
     void setRunning(bool running)
     {
-        m_Running = running;
+        gamestate.Running = running;
     }
 
     // Verifica o estado de execução
     [[nodiscard]] bool isRunning() const
     {
-        return m_Running;
+        return gamestate.Running;
     }
 
     // Inicializa a SDL e configura a janela e o renderizador
     bool init(int initflag, const char* title, int xpos, int ypos, int width, int height, int windowflag)
     {
-        // Inicialização do SDL
-        if (SDL_Init(initflag) < 0)
-        {
-            std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
+        if (!initializeSDL(initflag, title, xpos, ypos, width, height, windowflag))
             return false;
-        }
-        std::cout << "SDL Initialized" << std::endl;
 
-        // Criação da janela
-        window = SDL_CreateWindow(title, xpos, ypos, width, height, windowflag);
-        if (window == nullptr)
-        {
-            std::cout << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
-            SDL_Quit();
+        if (!loadAssets())
             return false;
-        }
-        std::cout << "Window Created" << std::endl;
-
-        // Criação do renderizador
-        renderer = SDL_CreateRenderer(window, -1, 0);
-        if (renderer == nullptr)
-        {
-            std::cout << "SDL_CreateRenderer Error: " << SDL_GetError() << std::endl;
-            SDL_DestroyWindow(window);
-            SDL_Quit();
-            return false;
-        }
-        std::cout << "Renderer Created" << std::endl;
-
-        // Carrega os assets
-        if (!ball->LoadBall(window, renderer))
-        {
-            std::cout << "Failed to load ball asset: " << SDL_GetError() << std::endl;
-            SDL_DestroyRenderer(renderer);
-            SDL_DestroyWindow(window);
-            SDL_Quit();
-            return false;
-        }
-        std::cout << "Ball loaded" << std::endl;
-
-        if (!player1->LoadPlayer(window, renderer, true))
-        {
-            std::cout << "Failed to load player asset: " << SDL_GetError() << std::endl;
-            SDL_DestroyRenderer(renderer);
-            SDL_DestroyWindow(window);
-            SDL_Quit();
-            return false;
-        }
-        if (!player2->LoadPlayer(window, renderer, false))
-        {
-            std::cout << "Failed to load player asset: " << SDL_GetError() << std::endl;
-            SDL_DestroyRenderer(renderer);
-            SDL_DestroyWindow(window);
-            SDL_Quit();
-            return false;
-        }
-        std::cout << "Players loaded" << std::endl;
-
-        if(!score->LoadScore(window, renderer))
-        {
-            std::cout << "Failed to load score" << SDL_GetError() << std::endl;
-            SDL_DestroyRenderer(renderer);
-            SDL_DestroyWindow(window);
-            SDL_Quit();
-            return false;
-        }
-        std::cout << "Score Loaded" << std::endl;
 
         std::cout << "Initialization Complete" << std::endl;
         return true;
-    }
-
-    // Lida com eventos de entrada
-    void handleKeyInput(SDL_Event event, int condition)
-    {
-        const char* array[] = {"PRESSED", "RELEASED"};
-
-        switch (event.key.keysym.sym)
-        {
-            // Player 1 (W e S)
-            case SDLK_w:
-                player1UpPressed = (condition == 0); // Pressionado ou solto
-                std::cout << "Player 1 UP " << array[condition] << std::endl;
-                break;
-            case SDLK_s:
-                player1DownPressed = (condition == 0);
-                std::cout << "Player 1 DOWN " << array[condition] << std::endl;
-                break;
-
-            // Player 2 (UP e DOWN)
-            case SDLK_UP:
-                player2UpPressed = (condition == 0);
-                std::cout << "Player 2 UP " << array[condition] << std::endl;
-                break;
-            case SDLK_DOWN:
-                player2DownPressed = (condition == 0);
-                std::cout << "Player 2 DOWN " << array[condition] << std::endl;
-                break;
-
-            default:
-                std::cout << "Unknown key " << array[condition] << std::endl;
-        }
     }
 
     void handleEvents()
@@ -193,17 +60,14 @@ public:
             {
                 case SDL_QUIT:
                     std::cout << "Message received: SDL_QUIT" << std::endl;
-                    m_Running = false;
+                    gamestate.Running = false;
                     break;
-
                 case SDL_KEYDOWN:
                     handleKeyInput(event, 0);
                     break;
-
                 case SDL_KEYUP:
                     handleKeyInput(event, 1);
                     break;
-
                 default:
                     break;
             }
@@ -213,64 +77,174 @@ public:
     // Atualiza o estado do jogo (lógica, física, etc.)
     void update()
     {
-        SDL_Rect rect1 = player1->UpdatePlayerPosition(window, player1UpPressed, player1DownPressed);
-        SDL_Rect rect2 = player2->UpdatePlayerPosition(window, player2UpPressed, player2DownPressed);
-        actualscore += ball->UpdateballPosition(window, rect1, rect2);
-        // Aqui você pode usar as variáveis player1UpPressed, player1DownPressed, player2UpPressed, player2DownPressed
-        // para movimentar os jogadores
+        SDL_Rect rect1 = players.player1->UpdatePlayerPosition(windowState.window, inputState.player1UpPressed, inputState.player1DownPressed);
+        SDL_Rect rect2 = players.player2->UpdatePlayerPosition(windowState.window, inputState.player2UpPressed, inputState.player2DownPressed);
+        gamestate.actualscore += props.ball->UpdateballPosition(windowState.window, rect1, rect2);
     }
 
     // Renderiza na janela
     void render()
     {
-        // Define o renderizador para preto
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+        SDL_SetRenderDrawColor(windowState.renderer, 0, 0, 0, 255);
+        SDL_RenderClear(windowState.renderer);
 
-        // Limpa a tela
-        SDL_RenderClear(renderer);
-
-        if (!score->RenderScore(renderer, actualscore))
+        if (!props.score->RenderScore(windowState.renderer, gamestate.actualscore))
         {
             std::cout << "Failed to render score" << std::endl;
-            m_Running = false;
+            gamestate.Running = false;
         }
 
-        // Renderiza a bola e os jogadores
-        if (!ball->RenderBall(renderer))
+        if (!props.ball->RenderBall(windowState.renderer))
         {
             std::cout << "Failed to render ball" << std::endl;
-            m_Running = false;
+            gamestate.Running = false;
         }
-        if (!player1->Renderplayer(renderer))
+        if (!players.player1->Renderplayer(windowState.renderer))
         {
             std::cout << "Failed to render player 1" << std::endl;
-            m_Running = false;
+            gamestate.Running = false;
         }
-        if (!player2->Renderplayer(renderer))
+        if (!players.player2->Renderplayer(windowState.renderer))
         {
             std::cout << "Failed to render player 2" << std::endl;
-            m_Running = false;
+            gamestate.Running = false;
         }
 
-        // Exibe o que foi renderizado
-        SDL_RenderPresent(renderer);
+        SDL_RenderPresent(windowState.renderer);
     }
 
 private:
-    SDL_Window* window;
-    SDL_Renderer* renderer;
-    bool m_Running;  // variável de controle de execução
-    Player* player1;
-    Player* player2;
-    Ball* ball;
-    Score* score;
-    int actualscore;
+    // Função para limpar os recursos
+    void cleanUp()
+    {
+        delete props.ball;
+        delete players.player1;
+        delete players.player2;
+        delete props.score;
 
-    // Variáveis para armazenar o estado das teclas
-    bool player1UpPressed;
-    bool player1DownPressed;
-    bool player2UpPressed;
-    bool player2DownPressed;
+        if (windowState.renderer)
+        {
+            SDL_DestroyRenderer(windowState.renderer);
+            std::cout << "Renderer Unallocated" << std::endl;
+        }
+        if (windowState.window)
+        {
+            SDL_DestroyWindow(windowState.window);
+            std::cout << "Window Unallocated" << std::endl;
+        }
+        SDL_Quit();
+    }
+
+    // Função para inicializar SDL e criar a janela e o renderizador
+    bool initializeSDL(int initflag, const char* title, int xpos, int ypos, int width, int height, int windowflag)
+    {
+        if (SDL_Init(initflag) < 0)
+        {
+            std::cout << "SDL_Init Error: " << SDL_GetError() << std::endl;
+            return false;
+        }
+
+        windowState.window = SDL_CreateWindow(title, xpos, ypos, width, height, windowflag);
+        if (windowState.window == nullptr)
+        {
+            std::cout << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;
+            SDL_Quit();
+            return false;
+        }
+
+        windowState.renderer = SDL_CreateRenderer(windowState.window, -1, 0);
+        if (windowState.renderer == nullptr)
+        {
+            std::cout << "SDL_CreateRenderer Error: " << SDL_GetError() << std::endl;
+            SDL_DestroyWindow(windowState.window);
+            SDL_Quit();
+            return false;
+        }
+
+        return true;
+    }
+
+    // Lida com eventos de entrada
+    void handleKeyInput(SDL_Event event, int condition)
+    {
+        const char* array[] = {"PRESSED", "RELEASED"};
+
+        switch (event.key.keysym.sym)
+        {
+            case SDLK_w:
+                inputState.player1UpPressed = (condition == 0);
+            std::cout << "Player 1 UP " << array[condition] << std::endl;
+            break;
+            case SDLK_s:
+                inputState.player1DownPressed = (condition == 0);
+            std::cout << "Player 1 DOWN " << array[condition] << std::endl;
+            break;
+            case SDLK_UP:
+                inputState.player2UpPressed = (condition == 0);
+            std::cout << "Player 2 UP " << array[condition] << std::endl;
+            break;
+            case SDLK_DOWN:
+                inputState.player2DownPressed = (condition == 0);
+            std::cout << "Player 2 DOWN " << array[condition] << std::endl;
+            break;
+            default:
+                std::cout << "Unknown key " << array[condition] << std::endl;
+        }
+    }
+
+    // Função para carregar os assets (bola, jogadores e placar)
+    bool loadAssets()
+    {
+        if (!props.ball->LoadBall(windowState.window, windowState.renderer) ||
+            !players.player1->LoadPlayer(windowState.window, windowState.renderer, true) ||
+            !players.player2->LoadPlayer(windowState.window, windowState.renderer, false) ||
+            !props.score->LoadScore(windowState.window, windowState.renderer
+            ))
+        {
+            SDL_DestroyRenderer(windowState.renderer);
+            SDL_DestroyWindow(windowState.window);
+            SDL_Quit();
+            return false;
+        }
+        return true;
+    }
+
+    //GLOBALS//
+
+    // Estrutura para o estado dos jogadores
+    struct PlayerState
+    {
+        Player* player1;
+        Player* player2;
+    };PlayerState players;
+
+    // Estrutura para o estado de entrada
+    struct InputState
+    {
+        bool player1UpPressed;
+        bool player1DownPressed;
+        bool player2UpPressed;
+        bool player2DownPressed;
+    };InputState inputState;
+
+    struct WindowState
+    {
+        SDL_Window* window;
+        SDL_Renderer* renderer;
+    };WindowState windowState;
+
+    struct GameState
+    {
+        bool Running;
+        int actualscore;
+    };GameState gamestate;
+
+    struct Props
+    {
+        Ball* ball;
+        Score* score;
+    };Props props;
+
 };
 
 #endif // GAME_H
