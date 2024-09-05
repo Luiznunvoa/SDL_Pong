@@ -62,7 +62,7 @@ public:
         return true;
     }
 
-    void UpdatePlayerPosition(SDL_Window* window, bool Up, bool Down)
+    SDL_Rect UpdatePlayerPosition(SDL_Window* window, bool Up, bool Down)
     {
         // Definir a direção atual com base nas teclas pressionadas
         if (Up)
@@ -89,6 +89,7 @@ public:
         {
             destinationplayer.y += currentdirection;
         }
+        return destinationplayer;
     }
 
 

@@ -193,9 +193,9 @@ public:
     // Atualiza o estado do jogo (lógica, física, etc.)
     void update()
     {
-        player1->UpdatePlayerPosition(window, player1UpPressed, player1DownPressed);
-        player2->UpdatePlayerPosition(window, player2UpPressed, player2DownPressed);
-        ball->UpdateballPosition(window);
+        SDL_Rect rect1 = player1->UpdatePlayerPosition(window, player1UpPressed, player1DownPressed);
+        SDL_Rect rect2 = player2->UpdatePlayerPosition(window, player2UpPressed, player2DownPressed);
+        ball->UpdateballPosition(window, rect1, rect2);
         // Aqui você pode usar as variáveis player1UpPressed, player1DownPressed, player2UpPressed, player2DownPressed
         // para movimentar os jogadores
     }

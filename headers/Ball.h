@@ -7,7 +7,11 @@
 class Ball
 {
 public:
-    Ball() : Surface(nullptr), Texture(nullptr), sourceball{0, 0, 0, 0}, destinationball{0, 0, 0, 0}, incrementx(5), incrementy(5) {}
+    Ball() : Surface(nullptr),
+    Texture(nullptr),
+    sourceball{0, 0, 0, 0},
+    destinationball{0, 0, 0, 0},
+    incrementx(5), incrementy(5) {}
 
     ~Ball()
     {
@@ -46,47 +50,50 @@ public:
         return true;
     }
 
+    // Verifica a colisão da bola com o jogador
+    bool CheckCollisionWithPlayer(SDL_Rect playerRect)
+    {
+        // Verifica se há sobreposição de retângulos (detecção de colisão)
+        if (destinationball.x < playerRect.x + playerRect.w &&
+            destinationball.x + destinationball.w > playerRect.x &&
+            destinationball.y < playerRect.y + playerRect.h &&
+            destinationball.y + destinationball.h > playerRect.y)
+        {
+            return true; // Colisão detectada
+        }
+        return false;
+    }
+
     //Altera a posição do retangulo
-    void UpdateballPosition(SDL_Window* window)
+    void UpdateballPosition(SDL_Window* window, SDL_Rect player1Rect, SDL_Rect player2Rect)
     {
         int width, height;
-
-        // Obter o tamanho da janela
         SDL_GetWindowSize(window, &width, &height);
 
-        // Verificar colisão com as bordas horizontais
-        if (((destinationball.x + destinationball.w) == width && incrementx > 0) ||
+        // Verificar colisão com as bordas da tela
+        if ((destinationball.x + destinationball.w == width && incrementx > 0) ||
             (destinationball.x == 0 && incrementx < 0))
         {
-            // Reverter a direção no eixo X
-            incrementx = -incrementx;
-
+            incrementx = -incrementx;  // Reverter a direção no eixo X
             destinationball.x = (width / 2);
             destinationball.y = (height / 2);
         }
 
-        // Verificar colisão com as bordas verticais
-        if (((destinationball.y + destinationball.h) == height && incrementy > 0) ||
+        if ((destinationball.y + destinationball.h == height && incrementy > 0) ||
             (destinationball.y == 0 && incrementy < 0))
         {
-            // Reverter a direção no eixo Y
-            incrementy = -incrementy;
+            incrementy = -incrementy;  // Reverter a direção no eixo Y
         }
 
-        // Atualizar a posição do retângulo
+        // Verificar colisão com os jogadores
+        if (CheckCollisionWithPlayer(player1Rect) || CheckCollisionWithPlayer(player2Rect))
+        {
+            incrementx = -incrementx;  // Reverter a direção ao colidir com os jogadores
+        }
+
+        // Atualizar a posição da bola
         destinationball.x += incrementx;
         destinationball.y += incrementy;
-
-        // Garantir que o retângulo não ultrapasse os limites da janela
-        if (destinationball.x < 0)
-            destinationball.x = 0;
-        else if (destinationball.x + destinationball.w > width)
-            destinationball.x = width - destinationball.w;
-
-        if (destinationball.y < 0)
-            destinationball.y = 0;
-        else if (destinationball.y + destinationball.h > height)
-            destinationball.y = height - destinationball.h;
     }
 
     //Renderiza o retangulo
