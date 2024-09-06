@@ -30,7 +30,7 @@ public:
     }
 
 
-    bool LoadScore(SDL_Window* window, SDL_Renderer* renderer)
+    bool LoadScore(SDL_Window* window, SDL_Renderer* renderer, bool p1)
     {
         Surface = SDL_LoadBMP("../assets/Score.bmp");
         if (Surface == nullptr)
@@ -48,7 +48,14 @@ public:
         SDL_GetWindowSize(window, &destinationtext.x, &destinationtext.y);
 
         destinationtext.x /= 2;
-        destinationtext.y /= 10;
+        if(p1)
+        {
+            destinationtext.y /= 10;
+        }
+        else
+        {
+            destinationtext.y -= 100;
+        }
         return true;
     }
 

@@ -4,33 +4,53 @@
 // Define o intervalo de ticks (tempo entre frames) para 30ms (~33 FPS)
 #define TICK_INTERVAL 30
 
-// Função para calcular o tempo restante até o próximo frame
+/**
+ * @brief Calculates the time remaining until the next frame.
+ *
+ * This function calculates the time left until the next frame based on the current
+ * time and the specified next frame time.
+ *
+ * @param next_time The time of the next frame in milliseconds.
+ * @return The time remaining until the next frame in milliseconds.
+ */
 static Uint32 time_left(Uint32 next_time)
 {
     Uint32 now = SDL_GetTicks();  // Pega o tempo atual
     return (next_time <= now) ? 0 : next_time - now;
 }
 
+/**
+ * @brief The main function of the game.
+ *
+ * This function initializes the game manager, sets up the SDL window and renderer,
+ * and runs the main game loop. It handles events, updates the game state, and renders
+ * the game elements. The game loop runs until the game is no longer running.
+ *
+ * @param argc The number of command-line arguments.
+ * @param argv The array of command-line arguments.
+ * @return 0 if the game exits successfully, -1 if there is an initialization error.
+ */
+
 int main(int argc, char* argv[])
 {
-    // Inicializa o gerenciador do jogo
+    // Inicializes the game manager
     Game* gameManager = new Game();
 
-    // Inicializa o SDL, cria a janela e o renderizador
+    // Inicializes the SDL library
     if (!gameManager->init(SDL_INIT_VIDEO, "MyWindow",
         100, 50, 1280, 960,
         SDL_WINDOW_SHOWN
         ))
     {
-        // Se houver falha na inicialização, retorna com erro
+        // If there is an error initializing the game, return -1
         return -1;
     }
 
-    gameManager->setRunning(true);  // Inicia o loop do jogo
+    gameManager->setRunning(true);  // Sets the game to running state
 
     Uint32 next_time = SDL_GetTicks() + TICK_INTERVAL;  // Tempo do próximo frame
 
-    // Loop principal do jogo
+    // Main Game loop
     while (gameManager->isRunning())
     {
         gameManager->handleEvents();  // Processa os eventos de input (teclado, mouse etc)
@@ -42,13 +62,11 @@ int main(int argc, char* argv[])
         next_time += TICK_INTERVAL;  // Calcula o tempo para o próximo frame
     }
 
-    // Libera a memória usada pelo gerenciador do jogo
+    // Free the memory from the gamemanager
     delete gameManager;
-    std::cout << "Game Finalized" << std::endl;
 
-    // Finaliza a SDL
+    // Quit the SDL library
     SDL_Quit();
-    std::cout << "SDL Finalized" << std::endl;
 
     return 0;
 }
