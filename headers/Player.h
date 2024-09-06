@@ -1,123 +1,114 @@
-//
-// Created by Luiz on 04/09/2024.
-//
-
 #ifndef PLAYER_H
 #define PLAYER_H
 
 #include <SDL.h>
 
-
+/**
+ * @brief Class representing a Player in the game.
+ *
+ * This class encapsulates the logic for loading, updating, and rendering the player.
+ */
 class Player
 {
 public:
-    Player() : Surface(nullptr),
-    Texture(nullptr),
-    sourceplayer{0, 0, 0, 0},
-    destinationplayer{0, 0, 0, 0},
-    currentdirection(0){}
+    /**
+     * @brief Constructor for the Player class.
+     *
+     * Initializes the player data with default values.
+     */
+    Player() : data{
+        nullptr,
+        nullptr,
+        {0, 0, 0, 0},
+        {0, 0, 0, 0},
+        0} {}
 
+    /**
+     * @brief Destructor for the Player class.
+     *
+     * Cleans up SDL resources.
+     */
     ~Player()
     {
-        if (Texture)
-        {
-            SDL_DestroyTexture(Texture);
-            Texture = nullptr;
-        }
-        if (Surface)
-        {
-            SDL_FreeSurface(Surface);
-            Surface = nullptr;
-        }
+        if (data.Texture) SDL_DestroyTexture(data.Texture);
+        if (data.Surface) SDL_FreeSurface(data.Surface);
     }
 
-    bool LoadPlayer(SDL_Window* window, SDL_Renderer* renderer, bool p1) {
-        Surface = SDL_LoadBMP("../assets/Player.bmp");
-        if (Surface == nullptr)
-        {
-            return false;
-        }
+    /**
+     * @brief Loads the player texture.
+     *
+     * @param window The SDL window.
+     * @param renderer The SDL renderer.
+     * @param p1 Boolean indicating if the player is player 1.
+     * @return True if the player texture is loaded successfully, false otherwise.
+     */
+    bool LoadPlayer(SDL_Window* window, SDL_Renderer* renderer, bool p1)
+    {
+        data.Surface = SDL_LoadBMP("../assets/Player.bmp");
+        if (!data.Surface) return false;
 
-        Texture = SDL_CreateTextureFromSurface(renderer, Surface);
+        data.Texture = SDL_CreateTextureFromSurface(renderer, data.Surface);
+        if (!data.Texture) return false;
 
-        if (Texture == nullptr)
-        {
-            return false;
-        }
-
-        // Defina o tamanho do sourceplayer após carregar a textura
-        SDL_QueryTexture(Texture, nullptr, nullptr, &sourceplayer.w, &sourceplayer.h);
-        SDL_GetWindowSize(window, &destinationplayer.x, &destinationplayer.y);
-        if(p1)
-        {
-            destinationplayer.x = 50;
-        }
-        else
-        {
-            destinationplayer.x -= 100;
-        }
-
-        destinationplayer.y /= 4;
+        SDL_QueryTexture(data.Texture, nullptr, nullptr, &data.sourceplayer.w, &data.sourceplayer.h);
+        SDL_GetWindowSize(window, &data.destinationplayer.x, &data.destinationplayer.y);
+        data.destinationplayer.x = p1 ? 50 : data.destinationplayer.x - 100;
+        data.destinationplayer.y /= 4;
 
         return true;
     }
 
+    /**
+     * @brief Updates the player position.
+     *
+     * @param window The SDL window.
+     * @param Up Boolean indicating if the player is moving up.
+     * @param Down Boolean indicating if the player is moving down.
+     * @return The updated destination rectangle of the player.
+     */
     SDL_Rect UpdatePlayerPosition(SDL_Window* window, bool Up, bool Down)
     {
-        // Definir a direção atual com base nas teclas pressionadas
-        if (Up)
-        {
-            currentdirection = -5; // Mover para cima
-        }
-        else if (Down)
-        {
-            currentdirection = 5;  // Mover para baixo
-        }
-        else
-        {
-            currentdirection = 0;  // Parado se nenhuma tecla pressionada
-        }
+        data.currentdirection = Up ? -5 : (Down ? 5 : 0);
 
-        int windowWidth, windowHeight;
+        int windowHeight;
+        SDL_GetWindowSize(window, nullptr, &windowHeight);
 
-        // Obter o tamanho da janela
-        SDL_GetWindowSize(window, &windowWidth, &windowHeight);
-
-        // Verifica se o jogador não vai ultrapassar as bordas da janela
-        if ((currentdirection < 0 && destinationplayer.y > 0) ||  // Movendo para cima, mas não ultrapassa o topo
-            (currentdirection > 0 && (destinationplayer.y + destinationplayer.h) < windowHeight))  // Movendo para baixo, mas não ultrapassa a base
+        if ((data.currentdirection < 0 && data.destinationplayer.y > 0) ||
+            (data.currentdirection > 0 && (data.destinationplayer.y + data.destinationplayer.h) < windowHeight))
         {
-            destinationplayer.y += currentdirection;
+            data.destinationplayer.y += data.currentdirection;
         }
-        return destinationplayer;
+        return data.destinationplayer;
     }
 
-
+    /**
+     * @brief Renders the player.
+     *
+     * @param renderer The SDL renderer.
+     * @return True if the player is rendered successfully, false otherwise.
+     */
     bool Renderplayer(SDL_Renderer* renderer)
     {
-        if (Texture == nullptr)
-        {
-            return false; // Garantir que não tentamos renderizar uma textura nula
-        }
+        if (!data.Texture) return false;
 
-        // Define a posição e o tamanho do destinationplayer
-        destinationplayer.w = sourceplayer.w;
-        destinationplayer.h = sourceplayer.h;
+        data.destinationplayer.w = data.sourceplayer.w;
+        data.destinationplayer.h = data.sourceplayer.h;
 
-        if (SDL_RenderCopy(renderer, Texture, &sourceplayer, &destinationplayer) != 0)
-        {
-            return false; // Retorna falso se houver falha em SDL_RenderCopy
-        }
-
-        return true;
+        return SDL_RenderCopy(renderer, data.Texture, &data.sourceplayer, &data.destinationplayer) == 0;
     }
 
 private:
-    SDL_Surface* Surface;
-    SDL_Texture* Texture;
-    SDL_Rect sourceplayer;
-    SDL_Rect destinationplayer;
-    int currentdirection;
+    /**
+     * @brief Struct to hold player data.
+     */
+    struct PlayerData
+    {
+        SDL_Surface* Surface; ///< The SDL surface for the player texture.
+        SDL_Texture* Texture; ///< The SDL texture for the player.
+        SDL_Rect sourceplayer; ///< The source rectangle for the player texture.
+        SDL_Rect destinationplayer; ///< The destination rectangle for the player texture.
+        int currentdirection; ///< The current direction of the player movement.
+    } data;
 };
 
-#endif //PLAYER_H
+#endif // PLAYER_H

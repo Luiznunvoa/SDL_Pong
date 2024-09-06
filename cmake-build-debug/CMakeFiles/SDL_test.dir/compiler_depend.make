@@ -104,8 +104,13 @@ CMakeFiles/SDL_test.dir/main.cpp.obj: C:/Dev/SDL2_Test01/Clion_SDL_Template/main
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocator.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_base.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_lockfree_defines.h \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.h \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/char_traits.h \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/charconv.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/concept_check.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cpp_type_traits.h \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_forced.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_init_exception.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h \
@@ -114,13 +119,17 @@ CMakeFiles/SDL_test.dir/main.cpp.obj: C:/Dev/SDL2_Test01/Clion_SDL_Template/main
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functional_hash.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/invoke.h \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/localefwd.h \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memory_resource.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memoryfwd.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/move.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/nested_exception.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/new_allocator.h \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream_insert.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/postypes.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/refwrap.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr.h \
@@ -137,10 +146,17 @@ CMakeFiles/SDL_test.dir/main.cpp.obj: C:/Dev/SDL2_Test01/Clion_SDL_Template/main
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_raw_storage_iter.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tempbuf.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_uninitialized.h \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/string_view.tcc \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_ptr.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator.h \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator_args.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/clocale \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstddef \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdio \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdlib \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwchar \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/assertions.h \
@@ -151,7 +167,9 @@ CMakeFiles/SDL_test.dir/main.cpp.obj: C:/Dev/SDL2_Test01/Clion_SDL_Template/main
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/atomicity.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/concurrence.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/numeric_traits.h \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/type_traits.h \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/memory \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/new \
@@ -159,12 +177,15 @@ CMakeFiles/SDL_test.dir/main.cpp.obj: C:/Dev/SDL2_Test01/Clion_SDL_Template/main
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/pstl_config.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdlib.h \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string_view \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tuple \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/typeinfo \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+  C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
@@ -243,9 +264,11 @@ CMakeFiles/SDL_test.dir/main.cpp.obj: C:/Dev/SDL2_Test01/Clion_SDL_Template/main
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
+  C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/ctype.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/errno.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/intrin.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/limits.h \
+  C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/locale.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/process.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/psdk_inc/intrin-impl.h \
@@ -256,6 +279,7 @@ CMakeFiles/SDL_test.dir/main.cpp.obj: C:/Dev/SDL2_Test01/Clion_SDL_Template/main
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/pthread_unistd.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/sdkddkver.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
@@ -264,6 +288,7 @@ CMakeFiles/SDL_test.dir/main.cpp.obj: C:/Dev/SDL2_Test01/Clion_SDL_Template/main
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/stdarg.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
+  C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
   C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/sys/timeb.h \
@@ -282,6 +307,8 @@ CMakeFiles/SDL_test.dir/main.cpp.obj: C:/Dev/SDL2_Test01/Clion_SDL_Template/main
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/assertions.h:
 
 C:/SDL2-2.30.7/x86_64-w64-mingw32/include/SDL2/SDL_video.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno:
 
 C:/SDL2-2.30.7/x86_64-w64-mingw32/include/SDL2/SDL_guid.h:
 
@@ -415,6 +442,8 @@ C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/inclu
 
 C:/SDL2-2.30.7/x86_64-w64-mingw32/include/SDL2/SDL_rwops.h:
 
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream_insert.h:
+
 C:/SDL2-2.30.7/x86_64-w64-mingw32/include/SDL2/SDL_scancode.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/clflushoptintrin.h:
@@ -442,6 +471,8 @@ C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/inclu
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512cdintrin.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/amxtileintrin.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vnniintrin.h:
 
@@ -487,6 +518,8 @@ C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/inclu
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vbmi2intrin.h:
 
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h:
+
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vbmi2vlintrin.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/avx512vbmiintrin.h:
@@ -531,6 +564,8 @@ C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/inclu
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocated_ptr.h:
 
+C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/locale.h:
+
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/refwrap.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h:
@@ -547,7 +582,21 @@ C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/inclu
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_lockfree_defines.h:
 
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm3dnow.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/char_traits.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_function.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/charconv.h:
+
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cpp_type_traits.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_forced.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_init_exception.h:
 
@@ -566,6 +615,12 @@ C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/inclu
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/invoke.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/localefwd.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/wchar.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memory_resource.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/keylockerintrin.h:
 
@@ -593,8 +648,6 @@ C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/inclu
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_construct.h:
 
-C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_function.h:
-
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_types.h:
@@ -605,13 +658,27 @@ C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/inclu
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_uninitialized.h:
 
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/string_view.tcc:
+
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_ptr.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator.h:
 
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator_args.h:
+
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/clocale:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstddef:
+
+C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/stdlib.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdio:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdlib:
 
@@ -632,6 +699,8 @@ C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/inclu
 C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/numeric_traits.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/pmmintrin.h:
 
@@ -655,6 +724,10 @@ C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/inclu
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/pstl_config.h:
 
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string_view:
+
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tuple:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits:
@@ -662,6 +735,8 @@ C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/inclu
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h:
 
@@ -703,8 +778,6 @@ C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/inclu
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/lzcntintrin.h:
 
-C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm3dnow.h:
-
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/movdirintrin.h:
@@ -740,6 +813,8 @@ C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/inclu
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/tsxldtrkintrin.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/uintrintrin.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/stdio.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/_mingw_stdarg.h:
 
@@ -785,6 +860,10 @@ C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstd
 
 C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h:
 
+C:/Dev/SDL2_Test01/Clion_SDL_Template/headers/Ball.h:
+
+C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/ctype.h:
+
 C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/errno.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/intrin.h:
@@ -809,6 +888,8 @@ C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/pthread_unis
 
 C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h:
 
+C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h:
+
 C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/sec_api/wchar_s.h:
@@ -817,15 +898,9 @@ C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/setjmp.h:
 
 C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/stdarg.h:
 
-C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/stdlib.h:
-
 C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/vadefs.h:
 
-C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/wchar.h:
-
 C:/Users/Administrator/Desktop/bin/mingw/x86_64-w64-mingw32/include/winapifamily.h:
-
-C:/Dev/SDL2_Test01/Clion_SDL_Template/headers/Ball.h:
 
 C:/Dev/SDL2_Test01/Clion_SDL_Template/headers/Game.h:
 

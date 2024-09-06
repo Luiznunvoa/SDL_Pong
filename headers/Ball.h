@@ -3,132 +3,143 @@
 
 #include <SDL.h>
 
-// Classe do retangulo
+/**
+ * @brief Class representing a Ball in the game.
+ *
+ * This class encapsulates the logic for loading, updating, and rendering the ball.
+ */
 class Ball
 {
 public:
-    Ball() : Surface(nullptr),
-    Texture(nullptr),
-    sourceball{0, 0, 0, 0},
-    destinationball{0, 0, 0, 0},
-    incrementx(5), incrementy(5) {}
+    /**
+     * @brief Constructor for the Ball class.
+     *
+     * Initializes the ball data with default values.
+     */
+    Ball() : data{
+        nullptr,
+        nullptr,
+        {0, 0, 0, 0},
+        {0, 0, 0, 0},
+        5, 5} {}
 
+    /**
+     * @brief Destructor for the Ball class.
+     *
+     * Cleans up SDL resources.
+     */
     ~Ball()
     {
-        if (Texture)
-        {
-            SDL_DestroyTexture(Texture);
-            Texture = nullptr;
-        }
-        if (Surface)
-        {
-            SDL_FreeSurface(Surface);
-            Surface = nullptr;
-        }
+        if (data.Texture) SDL_DestroyTexture(data.Texture);
+        if (data.Surface) SDL_FreeSurface(data.Surface);
     }
 
-    bool LoadBall(SDL_Window* window, SDL_Renderer* renderer) {
-        Surface = SDL_LoadBMP("../assets/rider.bmp");
-        if (Surface == nullptr)
-        {
-            return false;
-        }
+    /**
+     * @brief Loads the ball texture.
+     *
+     * @param window The SDL window.
+     * @param renderer The SDL renderer.
+     * @return True if the ball texture is loaded successfully, false otherwise.
+     */
+    bool LoadBall(SDL_Window* window, SDL_Renderer* renderer)
+    {
+        data.Surface = SDL_LoadBMP("../assets/rider.bmp");
+        if (!data.Surface) return false;
 
-        Texture = SDL_CreateTextureFromSurface(renderer, Surface);
+        data.Texture = SDL_CreateTextureFromSurface(renderer, data.Surface);
+        if (!data.Texture) return false;
 
-        if (Texture == nullptr)
-        {
-            return false;
-        }
-
-        // Defina o tamanho do sourceball após carregar a textura
-        SDL_QueryTexture(Texture, nullptr, nullptr, &sourceball.w, &sourceball.h);
-        SDL_GetWindowSize(window, &destinationball.x, &destinationball.y);
-        destinationball.x /= 2;
-        destinationball.y /= 2;
+        SDL_QueryTexture(data.Texture, nullptr, nullptr, &data.sourceball.w, &data.sourceball.h);
+        SDL_GetWindowSize(window, &data.destinationball.x, &data.destinationball.y);
+        data.destinationball.x /= 2;
+        data.destinationball.y /= 2;
 
         return true;
     }
 
-    // Verifica a colisão da bola com o jogador
-    bool CheckCollisionWithPlayer(SDL_Rect playerRect)
-    {
-        // Verifica se há sobreposição de retângulos (detecção de colisão)
-        if (destinationball.x < playerRect.x + playerRect.w &&
-            destinationball.x + destinationball.w > playerRect.x &&
-            destinationball.y < playerRect.y + playerRect.h &&
-            destinationball.y + destinationball.h > playerRect.y)
-        {
-            return true; // Colisão detectada
-        }
-        return false;
-    }
-
-    //Altera a posição do retangulo
-    void  UpdateballPosition(SDL_Window* window, SDL_Rect player1Rect, SDL_Rect player2Rect, int* score1, int* score2)
+    /**
+     * @brief Updates the ball position.
+     *
+     * @param window The SDL window.
+     * @param player1Rect The rectangle representing player 1.
+     * @param player2Rect The rectangle representing player 2.
+     * @param score1 Pointer to the score of player 1.
+     * @param score2 Pointer to the score of player 2.
+     */
+    void UpdateballPosition(SDL_Window* window, SDL_Rect player1Rect, SDL_Rect player2Rect, int* score1, int* score2)
     {
         int width, height;
         SDL_GetWindowSize(window, &width, &height);
 
-        // Verificar colisão com as bordas da tela
-        if ((destinationball.x + destinationball.w == width && incrementx > 0))
+        data.destinationball.w = data.sourceball.w;
+        data.destinationball.h = data.sourceball.h;
+
+        if (data.destinationball.x + data.destinationball.w >= width || data.destinationball.x <= 0)
         {
-            incrementx = -incrementx;  // Reverter a direção no eixo X
-            destinationball.x = (width / 2);
-            destinationball.y = (height / 2);
-            score1++;
-        }else if(destinationball.x == 0 && incrementx < 0)
-        {
-            incrementx = -incrementx;  // Reverter a direção no eixo X
-            destinationball.x = (width / 2);
-            destinationball.y = (height / 2);
-            score2++;
+            data.incrementx = -data.incrementx;
+            data.destinationball.x = width / 2;
+            data.destinationball.y = height / 2;
+            if (data.destinationball.x <= 0) (*score2)++;
+            else (*score1)++;
         }
 
-        if ((destinationball.y + destinationball.h == height && incrementy > 0) ||
-            (destinationball.y == 0 && incrementy < 0))
+        if (data.destinationball.y + data.destinationball.h >= height || data.destinationball.y <= 0)
         {
-            incrementy = -incrementy;  // Reverter a direção no eixo Y
+            data.incrementy = -data.incrementy;
         }
 
-        // Verificar colisão com os jogadores
         if (CheckCollisionWithPlayer(player1Rect) || CheckCollisionWithPlayer(player2Rect))
         {
-            incrementx = -incrementx;  // Reverter a direção ao colidir com os jogadores
+            data.incrementx = -data.incrementx;
         }
 
-        // Atualizar a posição da bola
-        destinationball.x += incrementx;
-        destinationball.y += incrementy;
+        data.destinationball.x += data.incrementx;
+        data.destinationball.y += data.incrementy;
     }
 
-    //Renderiza o retangulo
+    /**
+     * @brief Renders the ball.
+     *
+     * @param renderer The SDL renderer.
+     * @return True if the ball is rendered successfully, false otherwise.
+     */
     bool RenderBall(SDL_Renderer* renderer)
     {
-        if (Texture == nullptr)
-        {
-            return false; // Garantir que não tentamos renderizar uma textura nula
-        }
+        if (!data.Texture) return false;
 
-        // Define a posição e o tamanho do destinationball
-        destinationball.w = sourceball.w;
-        destinationball.h = sourceball.h;
+        data.destinationball.w = data.sourceball.w;
+        data.destinationball.h = data.sourceball.h;
 
-        if (SDL_RenderCopy(renderer, Texture, &sourceball, &destinationball) != 0)
-        {
-            return false; // Retorna falso se houver falha em SDL_RenderCopy
-        }
-
-        return true;
+        return SDL_RenderCopy(renderer, data.Texture, &data.sourceball, &data.destinationball) == 0;
     }
 
 private:
-    SDL_Surface* Surface;
-    SDL_Texture* Texture;
-    SDL_Rect sourceball;
-    SDL_Rect destinationball;
-    int incrementx;
-    int incrementy;
+    /**
+     * @brief Struct to hold ball data.
+     */
+    struct BallData
+    {
+        SDL_Surface* Surface; ///< The SDL surface for the ball texture.
+        SDL_Texture* Texture; ///< The SDL texture for the ball.
+        SDL_Rect sourceball; ///< The source rectangle for the ball texture.
+        SDL_Rect destinationball; ///< The destination rectangle for the ball texture.
+        int incrementx; ///< The increment value for the ball's x position.
+        int incrementy; ///< The increment value for the ball's y position.
+    } data;
+
+    /**
+     * @brief Checks collision with a player.
+     *
+     * @param playerRect The rectangle representing the player.
+     * @return True if there is a collision, false otherwise.
+     */
+    bool CheckCollisionWithPlayer(SDL_Rect playerRect)
+    {
+        return data.destinationball.x < playerRect.x + playerRect.w &&
+               data.destinationball.x + data.destinationball.w > playerRect.x &&
+               data.destinationball.y < playerRect.y + playerRect.h &&
+               data.destinationball.y + data.destinationball.h > playerRect.y;
+    }
 };
 
 #endif // BALL_H

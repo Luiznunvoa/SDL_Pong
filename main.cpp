@@ -53,13 +53,13 @@ int main(int argc, char* argv[])
     // Main Game loop
     while (gameManager->isRunning())
     {
-        gameManager->handleEvents();  // Processa os eventos de input (teclado, mouse etc)
-        gameManager->update();        // Atualiza a lógica do jogo
-        gameManager->render();        // Renderiza os gráficos
+        gameManager->handleEvents();  // Process events
+        gameManager->update();        // Calculates the game state
+        gameManager->render();        // Render the game elements
 
-        // Aguarda o tempo necessário para manter o FPS em ~33
+        // Wait until the next frame
         SDL_Delay(time_left(next_time));
-        next_time += TICK_INTERVAL;  // Calcula o tempo para o próximo frame
+        next_time += TICK_INTERVAL;  // Calculating the time of the next frame
     }
 
     // Free the memory from the gamemanager
